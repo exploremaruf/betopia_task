@@ -215,7 +215,7 @@ class HeaderSectionWidgets extends StatelessWidget {
                   height: 56,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: TextField(
                     decoration: InputDecoration(
