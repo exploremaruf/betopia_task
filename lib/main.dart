@@ -1,4 +1,4 @@
-import 'package:betopiatask/views/studentprotalview/student_protal_screen.dart';
+import 'package:betopiatask/views/studentprotalview/student_portal_view.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -14,7 +14,7 @@ class StudentProtal extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StudentProtalScreen(),
+      home:StudentPortalView() ,
     );
   }
 }
