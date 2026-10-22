@@ -1,5 +1,6 @@
 import 'package:betopiatask/views/studentprotalview/widgets/menu_bar_section.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class StudentPortalView extends StatelessWidget {
   const StudentPortalView({super.key});
@@ -13,7 +14,15 @@ class StudentPortalView extends StatelessWidget {
           'Student App',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
+        actions: [IconButton(onPressed: () {
+          Get.defaultDialog(
+            title:'Alert!',
+            middleText: 'Do you want to navigate to setting?',
+            textConfirm: 'Yes',
+            textCancel: 'Cancel'
+          );
+
+        }, icon: Icon(Icons.settings))],
       ),
       body: Column(
         children: [
