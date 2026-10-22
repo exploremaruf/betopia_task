@@ -1,3 +1,4 @@
+import 'package:betopiatask/views/profileview/profile_view.dart';
 import 'package:betopiatask/views/studentprotalview/widgets/menu_bar_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,15 +15,20 @@ class StudentPortalView extends StatelessWidget {
           'Student App',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        actions: [IconButton(onPressed: () {
-          Get.defaultDialog(
-            title:'Alert!',
-            middleText: 'Do you want to navigate to setting?',
-            textConfirm: 'Yes',
-            textCancel: 'Cancel'
-          );
-
-        }, icon: Icon(Icons.settings))],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Get.defaultDialog(
+                title: 'Alert!',
+                middleText: 'Do you want to navigate to setting?',
+                textConfirm: 'Yes',
+                textCancel: 'Cancel',
+                buttonColor: Colors.green,
+              );
+            },
+            icon: Icon(Icons.settings),
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -85,7 +91,7 @@ class StudentPortalView extends StatelessWidget {
                   Studentdetatils(
                     lebel: 'Student ID',
                     value: '101',
-                    icon: Icons.badge_sharp,
+                    icon: Icons.contact_mail_rounded,
                     color: Colors.green.shade100,
                     iconcolor: Colors.green,
                   ),
@@ -97,7 +103,9 @@ class StudentPortalView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.off(ProfileView());
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
