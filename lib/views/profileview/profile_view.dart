@@ -77,6 +77,40 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            Text('My Counter', style: TextStyle(fontSize: 20)),
+            SizedBox(height: 10),
+
+            Padding(
+              padding: const EdgeInsetsGeometry.symmetric(horizontal: 70),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: CircleAvatar(radius: 25, child: Icon(Icons.remove)),
+                    ),
+                    Text(
+                      '0',
+                      style: TextStyle(color: Colors.black, fontSize: 32),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: CircleAvatar(
+                        radius: 25,
+                        child: Icon(Icons.add, color: Colors.white),
+                        backgroundColor: Colors.green,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
